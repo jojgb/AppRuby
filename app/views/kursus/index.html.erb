@@ -1,0 +1,41 @@
+
+
+<div class="container">
+    <div class="row"></div>
+        <h2>Selamat Datang di Ruby Boss</h2>
+</div>
+
+<div class="container">
+    <div class="pull-left">
+        <%= link_to 'Tambah Data' , new_kursu_path , class:'btn btn-success'%>
+</div>
+
+<div class="container">
+    <% nomor = 1 %>  
+        <table class="table">
+            <thead>
+                <tr>
+                <th scope="col">No.</th>
+                <th scope="col">Nama Kursus</th>
+                <th scope="col">Harga Kursus</th>
+                <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% @kursu.each do|f|%>
+                <tr>
+                <th scope="row"><%= nomor%></th>
+                <td><%= f.nama_kursus%></td>
+                <td><%= f.harga_kursus%></td>
+                <td>
+                   <%= link_to 'Detail',f,class:'btn btn-warning' %>
+                   <%= link_to 'Edit',edit_kursu_path(f),class:'btn btn-info' %>
+                   <%= link_to 'Hapus', f,class:'btn btn-danger',method: :delete, data:{confirm: 'apakah benar ingin menghapus?'} %>
+                </td>
+
+                </tr>
+            <% nomor+=1 %>
+            <% end %>
+            </tbody>
+        </table>
+</div>

@@ -1,0 +1,2 @@
+class Kursu < ApplicationRecord
+end

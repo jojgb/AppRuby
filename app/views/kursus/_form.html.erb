@@ -1,0 +1,12 @@
+<div class="col-md-6">
+<%= form_for @kursu , html:{class:'form-horizontal'} do |f| %>
+
+<%= f.label :nama_kursus,'Nama Kursus : ',class:'control-label' %>
+<%= f.text_field :nama_kursus , class:'form-control'%>
+
+<%= f.label :harga_kursus,'Harga Kursus : ',class:'control-label' %>
+<%= f.text_field :harga_kursus , class:'form-control'%>
+
+<%= f.submit :Simpan ,class:'btn btn-success'%>
+
+<% end %>

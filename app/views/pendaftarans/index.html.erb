@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pendaftarans</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nama</th>
+      <th>Alamat</th>
+      <th>Hobi</th>
+      <th>No hp</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pendaftarans.each do |pendaftaran| %>
+      <tr>
+        <td><%= pendaftaran.nama %></td>
+        <td><%= pendaftaran.alamat %></td>
+        <td><%= pendaftaran.hobi %></td>
+        <td><%= pendaftaran.no_hp %></td>
+        <td><%= link_to 'Show', pendaftaran %></td>
+        <td><%= link_to 'Edit', edit_pendaftaran_path(pendaftaran) %></td>
+        <td><%= link_to 'Destroy', pendaftaran, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pendaftaran', new_pendaftaran_path %>

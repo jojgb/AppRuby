@@ -1,0 +1,2 @@
+class Pendaftaran < ApplicationRecord
+end

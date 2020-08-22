@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="col-md-6">
+        <h3>Daftar Harga</h3>
+
+        <p id="notice"><%= notice%></p>
+
+        <p>
+            <strong>Nama Kursus</strong>
+            <%= @kursu.nama_kursus %>
+        </p>
+
+        <p>
+            <strong>Harga Kursus</strong>
+            <%= @kursu.harga_kursus %>
+        </p>
+
+
+    </div>
+</div>
+
+
+<%= link_to 'Back' , kursus_path , {class:'btn btn-primary'}%>
